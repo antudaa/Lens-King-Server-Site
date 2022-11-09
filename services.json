@@ -1,0 +1,104 @@
+[
+    {
+        "service_id": "1",
+        "service_name": "Weeding PhotoShoot",
+        "image_url": "https://wiso.foxthemes.me/wp-content/uploads/2018/04/brooke-cagle-193347-e1525349223706.jpg",
+        "details": "Wedding photography is the nuanced art of capturing one of the most important days in a person's life. Wedding photographers create unique, everlasting memories that families treasure for a lifetime. Illustrative wedding photography makes use of the environment, whether natural or artificial, to frame compelling and visually appealing photos. This style makes use of lighting and background. The couples are made to pose in a way that they look natural. The photographers use more of wide-angle lenses and sometimes aerial photography to get that epic shot. In a way, it is also a blend of traditional and candid wedding photography. ",
+        "packages" : {
+            "silver": {
+                "price": "$120"
+            },
+            "gold": {
+                "price" : "$150"
+            },
+            "platinum" : {
+                "price" : "$200"
+            }
+        }
+    },
+    {
+        "service_id": "2",
+        "service_name": "Festival PhotoShoot",
+        "image_url": "https://wiso.foxthemes.me/wp-content/uploads/2018/05/ian-schneider-108618-unsplash.jpg",
+        "details": "With festival photography, take advantage of the interesting light opportunities. The place will be full of bright lights, strobe lights, lights of all different colours; experiment with your shutter speed and see what vibrant, striking action and moments you can capture.You’ll often experience a mixed range of weather and natural lighting throughout the day (especially if you’re in the UK for instance); these conditions can be very unpredictable and out of your control. But they can also add to the experience as a whole, providing a huge variety of different shots and photographic opportunities.",
+        "packages" : {
+            "silver": {
+                "price": "$100"
+            },
+            "gold": {
+                "price" : "$130"
+            },
+            "platinum" : {
+                "price" : "$160"
+            }
+        }
+    },
+    {
+        "service_id": "3",
+        "service_name": "Travel PhotoShoot",
+        "image_url": "https://wiso.foxthemes.me/wp-content/uploads/2018/05/averie-woodard-111834-unsplash.jpg",
+        "details": "Travel photography is a form of photography that for example involves photography of landscapes, historical buildings, cultures, and people in a specific place and destination to document a certain place and make others make to wish they were there.With a collection of travel photographs of amazing landscapes, wildlife, breathtaking nature, cultures, and people, you will have the possibility to showcase a place, country, or even the world through photos. Travel Photography goes further than just capturing an awesome image.",
+        "packages" : {
+            "silver": {
+                "price": "$160"
+            },
+            "gold": {
+                "price" : "$180"
+            },
+            "platinum" : {
+                "price" : "$240"
+            }
+        }
+    },
+    {
+        "service_id": "4",
+        "service_name": "Portrait PhotoShoot",
+        "image_url": "https://wiso.foxthemes.me/wp-content/uploads/2018/05/chester-wade-415018-unsplash.jpg",
+        "details": "A portrait can also refer to the orientation of a photograph and is the opposite of a landscape photograph. While most portraits of people are done in portrait orientation it is not unheard of to see portraits created in the landscape.Although the definition of portrait photography sounds simple enough, this form of photography can be complicated to master.What Is The Goal Of Portrait Photography?Portrait photography can be commercial or fine art which has very different goals.When it comes to fine art photography, the primary goal of portrait photography is to capture beautiful images that appear natural and allow a subjects personality to shine through.Portrait photographs are also required for countless commercial purposes, such as passports, professional biographies, security passes, and other documentation.",
+        "packages" : {
+            "silver": {
+                "price": "$60"
+            },
+            "gold": {
+                "price" : "$100"
+            },
+            "platinum" : {
+                "price" : "$120"
+            }
+        }
+    },
+    {
+        "service_id": "5",
+        "service_name": "Occasional PhotoShoot",
+        "image_url": "https://wiso.foxthemes.me/wp-content/uploads/2018/04/alexandra-gorn-340203-e1525348945234.jpg",
+        "details": "How often do you get excited to see a good photograph? Whether it is of your child playing or that of a picture taken in a picnic or a marriage party, we all get interested to see and appreciate a good photograph. A photograph helps us to recall our past and makes us nostalgic. Do you realize how the camera works? What are the different types of camera? In this unit we will introduce you to the basic concept of ‘Photography’. This is the first unit of the full course on ‘Introduction to Photography’.After a thorough study of this unit you will have developed an adequate understanding of the concept of Photography. Here we will discuss various types of camera and the differences between the still and movie photography. We will also discuss the different concepts of composition and exposure in photography with all its characteristics and aspects.We hope that this unit will open up to you the exciting world of photography in a completely new light. So let us begin our journey into this world by understanding the meaning of the word ‘photography’ from the point of view of a professional visual communicator. While studying this unit try to focus on the fundamentals, as this unit will be the beginning of a new way of looking at photographs!",
+        "packages" : {
+            "silver": {
+                "price": "$120"
+            },
+            "gold": {
+                "price" : "$170"
+            },
+            "platinum" : {
+                "price" : "$190"
+            }
+        }
+    },
+    {
+        "service_id": "6",
+        "service_name": "Videography",
+        "image_url": "https://wiso.foxthemes.me/wp-content/uploads/2018/04/christian-sterk-174005.jpg",
+        "details": "Videography is the process of capturing moving images on electronic media (e.g., videotape, direct to disk recording, or solid state storage) and even streaming media. The term includes methods of video production and post-production.Videography is used to create video content, and use audio equipment and video cameras to sound and capture moving scenes and document events. Photography creates visual content by capturing images of landscapes, events, and people.",
+        "packages" : {
+            "silver": {
+                "price": "$1400"
+            },
+            "gold": {
+                "price" : "$200"
+            },
+            "platinum" : {
+                "price" : "$280"
+            }
+        }
+    }
+]
