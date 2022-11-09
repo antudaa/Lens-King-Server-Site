@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 
 require('dotenv').config();
 const app = express();
@@ -23,6 +23,9 @@ async function run(){
     try{
         const serviceCollections = client.db('lensKing').collection('services');
 
+        // Collection for reviews...
+        const reviewCollections = client.db('lensKing').collection('reviews');
+
         app.get('/homeServices', async (req, res) => {
             const query = {};
             const cursor = serviceCollections.find(query).limit(3);
@@ -35,7 +38,24 @@ async function run(){
             const cursor = serviceCollections.find(query);
             const services = await cursor.toArray();
             res.send(services);
+        });
+
+        app.get('/services/:id', async (req, res) => {
+            const id = req.params.id;
+            const query = {_id : ObjectId(id)};
+            const service = await serviceCollections.findOne(query);
+            res.send(service);
+        });
+
+
+        // Review 
+        app.post('/reviews', async (req, res) => {
+            const review = req.body;
+            const result = await reviewCollections.insertOne(review);
+            res.send(result);
         })
+
+
     }
     finally{
 
