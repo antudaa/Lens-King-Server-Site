@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const jwt = require('jsonwebtoken');
 
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 
@@ -19,12 +20,37 @@ const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@clu
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
+
+function verifyJWT(req, res, next){
+    const authHeader = req.headers.authorization;
+    if(!authHeader){
+        return res.status(401).send({message : 'unauthorized access'})
+    }
+    const token = authHeader.split(' ')[1];
+    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, function( err, decoded){
+        if(err){
+            return res.status(401).send({message : 'unauthorized access'})
+        }
+        req.decoded = decoded;
+        next();
+    })
+}
+
+
 async function run(){
     try{
         const serviceCollections = client.db('lensKing').collection('services');
 
         // Collection for reviews...
         const reviewCollections = client.db('lensKing').collection('reviews');
+
+        app.post('/jwt', async (req, res) => {
+            const user = req.body;
+            const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {
+                expiresIn : '10h'
+            })
+            res.send({token})
+        })
 
         app.get('/homeServices', async (req, res) => {
             const query = {};
@@ -47,6 +73,7 @@ async function run(){
         });
 
         app.get('/services/:id', async (req, res) => {
+
             const id = req.params.id;
             const query = {_id : ObjectId(id)};
             const service = await serviceCollections.findOne(query);
@@ -71,6 +98,7 @@ async function run(){
 
 
         app.get('/reviewsUid', async (req, res) => {
+
             let query = {};
             if(req.query.user){
                 query = {
@@ -84,7 +112,8 @@ async function run(){
         });
 
 
-        app.get('/reviewsId', async (req, res) => {
+        app.get('/reviewsId',verifyJWT, async (req, res) => {
+            
             let query = {};
             if(req.query.serviceId){
                 query = {
